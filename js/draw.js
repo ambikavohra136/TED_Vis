@@ -107,8 +107,9 @@ function getTopTalks(category, data) {
   data.forEach(function(d, i) {
     var dict = [];
 
+    var category_test = d['tags'].split(',')[0].toLowerCase();
 
-    if (d['tags'].split(',')[0] == category && counter <= 4) //if there is a match, display link & tite of talk
+    if ((category_test == category) && counter <= 4) //if there is a match, display link & tite of talk
     {
       item_array = [];
       var list = "";
